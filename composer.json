@@ -1,0 +1,28 @@
+{
+    "name": "chrismitchell/cmmvc",
+    "type": "library",
+    "require": {
+        "eher/phpunit": "^1.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chumanfu",
+            "email": "christopher.mitchell.79@gmail.com"
+        }
+    ],
+    "autoload": 
+    {
+        "psr-4": 
+        {
+            "CMMVC\\": "src/CMMVC"
+        }
+    },
+    "autoload-dev": 
+    {
+        "psr-4": 
+        {
+            "CMMVC\\Tests\\": "tests/"
+        }
+    }
+}
