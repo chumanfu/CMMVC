@@ -2,7 +2,7 @@
 
 namespace CMMVC\Middleware;
 
-class AuthMiddleware implements CMMVC\Middleware\MiddlewareInterface
+class AuthMiddleware implements \CMMVC\Middleware\MiddlewareInterface
 {
     protected $app;
 
