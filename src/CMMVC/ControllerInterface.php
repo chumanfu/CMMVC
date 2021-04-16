@@ -4,7 +4,5 @@ namespace CMMVC;
 
 interface ControllerInterface
 {
-	public function index($var);
+    public function index($var);
 }
-
-?>

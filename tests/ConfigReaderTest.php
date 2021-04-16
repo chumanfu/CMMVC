@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use CMMVC\Config\ConfigReaderFactory;
 
-class ConfigReaderTest extends PHPUnit_Framework_TestCase
+class ConfigReaderTest extends TestCase
 {
     public function testConfigReaderFactoryJSON()
     {

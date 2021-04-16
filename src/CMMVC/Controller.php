@@ -7,17 +7,15 @@ use CMMVC\ControllerTrait;
 
 class Controller implements ControllerInterface
 {
-	function __construct(ApplicationInterface $application)
-	{
-		$this->app = $application;
-	}
+    public function __construct(ApplicationInterface $application)
+    {
+        $this->app = $application;
+    }
 
-	public function index($var)
-	{
-		echo $var;
-	}
+    public function index($var)
+    {
+        echo $var;
+    }
 
-	use ControllerTrait;
+    use ControllerTrait;
 }
-
-?>

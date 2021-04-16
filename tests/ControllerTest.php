@@ -1,10 +1,11 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use CMMVC\Controller;
 use CMMVC\Application;
 use CMMVC\HTTP\URIReader;
 
-class ControllerTest extends PHPUnit_Framework_TestCase
+class ControllerTest extends TestCase
 {
     public function testValidCSRF()
     {

@@ -7,7 +7,5 @@ use CMMVC\Config\ConfigReader;
 
 interface MiddlewareInterface
 {
-	public function handle($route);
+    public function handle($route);
 }
-
-?>

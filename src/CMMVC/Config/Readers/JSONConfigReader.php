@@ -6,14 +6,12 @@ use CMMVC\Config\ConfigReader;
 
 class JSONConfigReader extends ConfigReader
 {
-	public function readConfig($configfile)
-	{
-		$this->configFile = $configfile;
+    public function readConfig($configfile)
+    {
+        $this->configFile = $configfile;
 
-		$configFileData = file_get_contents($this->configFile);
+        $configFileData = file_get_contents($this->configFile);
 
-		$this->config = json_decode($configFileData, true);
-	}
+        $this->config = json_decode($configFileData, true);
+    }
 }
-
-?>

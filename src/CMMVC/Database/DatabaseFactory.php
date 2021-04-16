@@ -6,21 +6,22 @@ use CMMVC\Exceptions\AppException;
 
 class DatabaseFactory
 {
-	public static function getDatabase($type, $dbhost, $dbname, $dbuser, $dbpassword)
-	{
-		if (strtolower($type) == "mysql")
-		{
-			$connection = new MySQLDatabase();
-		}
-		else if (strtolower($type) == "file")
-		{
-			$connection = new FileDatabase();
-		}
+    public static function getDatabase($type, $dbhost, $dbname, $dbuser, $dbpassword)
+    {
+        $connection = null;
 
-		$connection->connect($dbhost, $dbname, $dbuser, $dbpassword);
+        if (strtolower($type) == "mysql") {
+            $connection = new MySQLDatabase();
+        } elseif (strtolower($type) == "file") {
+            $connection = new FileDatabase();
+        }
 
-		return $connection;
-	}
+        if ($connection) {
+            $connection->connect($dbhost, $dbname, $dbuser, $dbpassword);
+        } else {
+            throw new AppException("Invalid connection type: " . $type);
+        }
+
+        return $connection;
+    }
 }
-
-?>

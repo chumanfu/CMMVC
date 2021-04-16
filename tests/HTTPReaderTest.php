@@ -1,8 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase;
 use CMMVC\HTTP\HTTPReader;
 
-class HTTPReaderTest extends PHPUnit_Framework_TestCase
+class HTTPReaderTest extends TestCase
 {
     public function testGetPosts()
     {

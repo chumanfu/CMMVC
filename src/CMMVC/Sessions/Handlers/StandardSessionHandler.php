@@ -6,53 +6,46 @@ use CMMVC\Sessions\SessionHandler;
 
 class StandardSessionHandler extends SessionHandler
 {
-	public function startSession()
-	{
-		if ($this->sessionID == '')
-		{
-    		session_start();
+    public function startSession()
+    {
+        if ($this->sessionID == '') {
+            session_start();
 
-    		$this->sessionID = session_id();
-		}
-	}
+            $this->sessionID = session_id();
+        }
+    }
 
-	public function restartSession()
-	{
-		$this->endSession();
-		
-		$this->startSession();	
-	}
+    public function restartSession()
+    {
+        $this->endSession();
+        
+        $this->startSession();
+    }
 
-	public function getSessionValue($key, $default=null)
-	{
-		if (!empty($_SESSION[$key]))
-		{
-			return $_SESSION[$key];
-		}
-		else
-		{
-			return $default;
-		}
-	}
+    public function getSessionValue($key, $default=null)
+    {
+        if (!empty($_SESSION[$key])) {
+            return $_SESSION[$key];
+        } else {
+            return $default;
+        }
+    }
 
-	public function setSessionValue($key, $value)
-	{
-		$this->startSession();
+    public function setSessionValue($key, $value)
+    {
+        $this->startSession();
 
-		$_SESSION[$key] = $value;
-	}
+        $_SESSION[$key] = $value;
+    }
 
-	public function endSession()
-	{
-		$this->sessionID = '';
+    public function endSession()
+    {
+        $this->sessionID = '';
 
-		// remove all session variables
-		session_unset();
+        // remove all session variables
+        session_unset();
 
-		// destroy the session
-		session_destroy(); 
-	}
-
+        // destroy the session
+        session_destroy();
+    }
 }
-
-?>

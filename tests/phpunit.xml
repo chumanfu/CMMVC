@@ -1,7 +1,0 @@
-<phpunit bootstrap="../vendor/autoload.php">
-
-	<testsuite name="CMMVC Test Suite">
-	    <directory suffix="Test.php">./</directory>
-	</testsuite>
-
-</phpunit>
