@@ -2,8 +2,6 @@
 
 namespace CMMVC\Middleware;
 
-use CMMVC\Middleware\MiddlewareInterface;
-
 class AuthMiddleware implements MiddlewareInterface
 {
     protected $app;

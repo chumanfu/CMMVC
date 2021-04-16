@@ -11,7 +11,7 @@ use CMMVC\Config\ConfigReaderFactory;
 use CMMVC\HTTP\HTTPReader;
 use CMMVC\HTTP\URIReader;
 
-final class Application implements ApplicationInterface
+class Application implements ApplicationInterface
 {
     private $configReader;
     private $sessionHandler;
